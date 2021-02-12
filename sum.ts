@@ -1,8 +1,15 @@
-function sum(a, b) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(a + b);
-    }, 5000);  
-  })
+function callMultiple(items, callback) {
+  for (let index = 0; index < items.length; index++) {
+    callback(items[index]);
+  }
 }
-export default sum;
+
+// function getUser(UserModel, id) {
+//   const user = UserModel.findOne(id);
+//   return user;
+// }
+
+export {
+  callMultiple,
+  // getUser
+};
